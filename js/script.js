@@ -11,9 +11,35 @@ ButtonMenu.addEventListener('click', function(){
 const logo = document.querySelector('.logo-client').cloneNode(true);
 document.querySelector('.container-client-content').appendChild(logo)
 
+//login button//
+document.querySelector('.Login-Button').addEventListener('click', function() {
+    window.location.href = 'https://quickcert.alphabetincubator.id/login';
+    
+});
+document.querySelector('.button-secondary').addEventListener('click', function() {
+    window.location.href = 'https://quickcert.alphabetincubator.id/login';
+})
+
+// HUBUNGI KAMI//
+const ButtonHub = document.querySelector('.hubungi-kami');
+const  modalitem = document.querySelector('#modal-content');
+
+ButtonHub.onclick = (e) => {
+    modalitem.style.display = 'flex';
+    e.preventDefault();
+}
+//close modal button
+document.querySelector('.button-close').onclick = function(e){
+    modalitem.style.display = 'none';
+    e.preventDefault();
+}
+document.querySelector('.modal-close').onclick = function(e){
+    modalitem.style.display = 'none';
+    e.preventDefault();
+}
 //animation scrool//
 ScrollReveal({ 
-    reset: true,
+    reset: false,
     distance: '200px',
     duration:2000,
     delay:200
@@ -40,3 +66,4 @@ navlinks.forEach(link =>{
        });
     })
 })
+
